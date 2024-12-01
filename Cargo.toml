@@ -1,0 +1,4 @@
+[workspace]
+members = ["crates/*","helper"]
+default-members = ["crates/day*"]
+resolver = "2"

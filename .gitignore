@@ -1,0 +1,7 @@
+/target/
+/crates/*/target
+
+/debug/
+/crates/*/debug
+
+/inputs/
