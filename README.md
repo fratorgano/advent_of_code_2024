@@ -33,6 +33,7 @@ path = "../template"
 | Day | Part 1 Time | Part 1 Rank | Part 1 Runtime[^1][^2] | Part 2 Time | Part 2 Rank | Part 2 Runtime[^1][^2] |
 |:-:|-:|-:|-:|-:|-:|-:|
 |  1 | 04:21:36 | 24096 | 112.4µs | 04:37:10 | 23290 | 157.9µs |
+|  2 | 03:58:04 | 34218 | 303.1µs | 04:11:46 | 23378 | 643.2µs |
 <!--|  1 | 00:13:19 |  5740 |  19.5µs | 00:21:33 |  5187 |  20.7µs | -->
 
 ## 🎄 Have a wonderful Holiday Season everyone! 🎄
