@@ -43,7 +43,7 @@ path = "../template"
 
 ## 🎄 Have a wonderful Holiday Season everyone! 🎄
 
-![koch flakes](https://raw.githubusercontent.com/fratorgano/advent_of_code_2020/main/snow.gif)
+![koch flakes](koch_snowflakes.gif)
 
 
 [^1]: `cargo run -p day** --release`, does not include the reading of the input file but includes parsing.
