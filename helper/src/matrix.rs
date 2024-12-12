@@ -31,3 +31,49 @@ pub fn transpose<T: std::clone::Clone>(original: &Vec<Vec<T>>) -> Vec<Vec<T>> {
         })
         .collect()
 }
+
+pub fn find_neighbours_indices<T>(
+    matrix: &Vec<Vec<T>>,
+    pos: (usize, usize),
+) -> Vec<(usize, usize)> {
+    let mut neighbours = vec![];
+    if pos.1 > 0 {
+        neighbours.push((pos.0, pos.1 - 1));
+    }
+    if pos.1 < matrix[0].len() - 1 {
+        neighbours.push((pos.0, pos.1 + 1));
+    }
+    if pos.0 > 0 {
+        neighbours.push((pos.0 - 1, pos.1));
+    }
+    if pos.0 < matrix.len() - 1 {
+        neighbours.push((pos.0 + 1, pos.1));
+    }
+
+    neighbours
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_neighbours() {
+        let matrix = vec![vec![1, 2], vec![3, 4]];
+        assert_eq!(
+            vec![(0, 1), (1, 0)],
+            find_neighbours_indices(&matrix, (0, 0))
+        );
+        assert_eq!(
+            vec![(0, 0), (1, 1)],
+            find_neighbours_indices(&matrix, (0, 1))
+        );
+        assert_eq!(
+            vec![(1, 1), (0, 0)],
+            find_neighbours_indices(&matrix, (1, 0))
+        );
+        assert_eq!(
+            vec![(1, 0), (0, 1)],
+            find_neighbours_indices(&matrix, (1, 1))
+        );
+    }
+}
